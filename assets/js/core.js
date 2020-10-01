@@ -121,7 +121,7 @@ $(function() {
 
     //Skin changer
     $('.choose-skin li').on('click', function() {
-        var $body = $('body');
+        var $body =  $('body');
         var $this = $(this);
 
         var existTheme = $('.choose-skin li.active').data('theme');
