@@ -49,18 +49,20 @@
         <h5 class="brand-name">Appraisal Management System<a class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
         <ul class="nav nav-tabs">   
             
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-uni">Admin</a></li>
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-admin">Employee</a></li>
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-uni">Admin</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-admin">TL</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-user">User</a></li>
         </ul>
         <div class="tab-content mt-3">
-            <div class="tab-pane fade " id="menu-uni" role="tabpanel">
+            <div class="tab-pane fade show active " id="menu-uni" role="tabpanel">
                 <nav class="sidebar-nav">
                     <ul class="metismenu">
-                        <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
-                       
+                        <li ><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+                        <li><a href="taskboard.html"><i class="fa fa-list-ul"></i><span>Taskboard</span></a></li>
                         <li><a href="staff.html"><i class="fa fa-user-circle-o"></i><span>Staff</span></a></li>
                         
                         <li><a href="departments.html"><i class="fa fa-users"></i><span>Departments</span></a></li>
+                        <li class="active"><a href="add-task.html"><i class="fa fa-plus-circle" aria-hidden="true"></i><span>Add Task</span></a></li>
                         
                         <!-- <li><a href="holiday.html"><i class="fa fa-bullhorn"></i><span>Holiday</span></a></li> -->
                         <!-- <li class="g_heading">Extra</li> -->
@@ -70,14 +72,26 @@
                         </ul>
                 </nav>
             </div>
-            <div class="tab-pane fade show active" id="menu-admin" role="tabpanel">
+            <div class="tab-pane fade " id="menu-admin" role="tabpanel">
+                <nav class="sidebar-nav">
+                    <ul class="metismenu">
+                        
+                        <li><a href="noticeboard.html"><i class="fa fa-dashboard"></i><span>Noticeboard</span></a></li>
+                        <li><a href="taskboard.html"><i class="fa fa-list-ul"></i><span>Taskboard</span></a></li> 
+                        <li><a href="staff.html"><i class="fa fa-user-circle-o"></i><span>Staff</span></a></li>
+                        <li><a href="add-task.html"><i class="fa fa-plus-circle" aria-hidden="true"></i><span>Add Task</span></a></li>                       
+                        <!-- <li><a href="attendance.html"><i class="fa fa-calendar-check-o"></i><span>Attendance</span></a></li> -->
+                        <!-- <li><a href="leave.html"><i class="fa fa-flag"></i><span>Leave</span></a></li>                         -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="tab-pane fade" id="menu-user" role="tabpanel">
                 <nav class="sidebar-nav">
                     <ul class="metismenu">
                         
                         <li><a href="noticeboard.html"><i class="fa fa-dashboard"></i><span>Noticeboard</span></a></li>
                         <li><a href="taskboard.html"><i class="fa fa-list-ul"></i><span>Taskboard</span></a></li>                        
-                        <li><a href="attendance.html"><i class="fa fa-calendar-check-o"></i><span>Attendance</span></a></li>
-                        <!-- <li><a href="leave.html"><i class="fa fa-flag"></i><span>Leave</span></a></li>                         -->
+                                             
                     </ul>
                 </nav>
             </div>
@@ -119,12 +133,80 @@
                         <ol class="breadcrumb page-breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Appraisal</a></li>
                             <li class="breadcrumb-item"><a href="#">Employee</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Noticeboard</li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Task</li>
                         </ol>
                     </div>  
                </div>
             </div>
         </div>
+
+        <div class="section-body mt-4">
+    
+
+<div class="tab-pane" id="TaskBoard-add">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Add Task</h3>
+            <div class="card-options ">
+                <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+            </div>
+        </div>
+        <form class="card-body">
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label">Task no. <span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label">Job title <span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label">Select Team <span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <select class="form-control show-tick">
+                        <option>Select</option>
+                        <option>Technology</option>
+                        <option>Sales</option>
+                        <option>M & E</option>
+                        <option>Engagement</option>
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label">Description <span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label">Range <span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <div class="input-daterange input-group" data-provide="datepicker">
+                        <input type="text" class="form-control" name="start">
+                        <span class="input-group-addon"> to </span>
+                        <input type="text" class="form-control" name="end">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label"></label>
+                <div class="col-md-7">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
         
         <!-- Start main footer -->
         <div class="section-body">
